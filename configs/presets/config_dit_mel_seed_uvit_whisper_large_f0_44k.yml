@@ -35,7 +35,7 @@ model_params:
 
   speech_tokenizer:
     type: 'whisper'
-    name: "openai/whisper-small"
+    name: "openai/whisper-large"
 
   style_encoder:
     dim: 192
@@ -51,7 +51,7 @@ model_params:
   length_regulator:
     channels: 768
     is_discrete: false
-    in_channels: 768
+    in_channels: 1280
     content_codebook_size: 2048
     sampling_ratios: [1, 1, 1, 1]
     vector_quantize: false
@@ -80,7 +80,7 @@ model_params:
     long_skip_connection: false
     zero_prompt_speech_token: false # for prompt component, do not input corresponding speech token
     time_as_token: false
-    style_as_token: false
+    style_as_token: true
     uvit_skip_connection: true
     add_resblock_in_transformer: false
 
